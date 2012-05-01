@@ -55,3 +55,23 @@ A static version of the code is also automatically built.
 You can see this by running
 
     $ ./consoletest
+
+### OpenGL Test
+
+This test shows that dynamic loading works even in parallel
+with large open libraries, without breaking code or forcing
+a large reload. The main drawing function is dynamically
+loaded, so any changes to the drawing are automatically
+re-loaded and the new scene is re-drawn.
+
+To see this, run
+
+    $ ./gltest-dynamic
+
+Then, modify the drawing code in `draw.c` while the program
+is running, and see the new scene be redrawn automatically.
+
+A static version of the code is also built, which can be
+used by
+
+    $ ./gltest
