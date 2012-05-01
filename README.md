@@ -26,9 +26,10 @@ test modificiations to code
 Simply run
 
     $ make
+    $ make install
 
 from this directory, and the library and all examples will
-be built.
+be built, and the library installed
 
 ## Examples
 
@@ -44,11 +45,11 @@ and the new printing function is called automatically.
 
 To see this in action, run
 
-    $ LD_LIBRARY_PATH ./consoletest-dynamic
+    $ ./consoletest-dynamic
 
-Then, modify the code in `a.c` and remake from within the
-console directory. The new code will be automatically
-reloaded!
+Then, modify the code in `a.c` while the program is running
+and remake from within the console directory. The new code
+will be automatically reloaded!
 
 A static version of the code is also automatically built.
 You can see this by running
