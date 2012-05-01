@@ -10,6 +10,7 @@ HEADERS=$(wildcard *.h)
 .PHONY:
 all: libdyload.so
 	cd consoletest; make
+	cd gltest; make
 
 # compile the library
 libdyload.so: library.o watch_library.o
@@ -27,3 +28,4 @@ install:
 clean:
 	rm -f libdyload.so *.o
 	cd consoletest; make clean
+	cd gltest; make clean
