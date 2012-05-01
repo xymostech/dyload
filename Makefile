@@ -19,6 +19,9 @@ libdyload.so: library.o watch_library.o
 %.o: %.c $(HEADERS)
 	$(CC) -c -fPIC -o $@ $<
 
+install:
+	cp libdyload.so /usr/lib/
+
 # clean the project
 .PHONY: clean
 clean:
