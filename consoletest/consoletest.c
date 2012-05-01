@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "watch_library.h"
+#include <dyload.h>
 
 /* include the header like normal */
 #include "a.h"

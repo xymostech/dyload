@@ -2,8 +2,7 @@
 #define a_h
 
 #ifdef DYNAMIC
-#include "watch_library.h"
-#include "library.h"
+#include <dyload.h>
 	/* function to setup the dynamically loading
 	 * library */
 	void setup_library_a();

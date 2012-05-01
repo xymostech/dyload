@@ -1,4 +1,4 @@
-#include "watch_library.h"
+#include "dyload_watch_library.h"
 
 /* some useful definitions */
 #define EVENT_SIZE (sizeof(struct inotify_event))

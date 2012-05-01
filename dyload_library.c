@@ -1,4 +1,4 @@
-#include "library.h"
+#include "dyload_library.h"
 
 /* mallocs a library and stores the name */
 library_t make_library(char* name) {

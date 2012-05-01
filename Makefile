@@ -4,7 +4,6 @@ CC=gcc
 # general linker flags
 LFLAGS=-lpthread -ldl
 
-OBJ=library watch_library
 HEADERS=$(wildcard *.h)
 
 .PHONY:
@@ -13,15 +12,18 @@ all: libdyload.so
 	cd gltest; make
 
 # compile the library
-libdyload.so: library.o watch_library.o
+libdyload.so: dyload_library.o dyload_watch_library.o
 	$(CC) -shared -Wl,-soname,$@ -o $@ $^ $(LFLAGS)
 
 # compile the files
 %.o: %.c $(HEADERS)
-	$(CC) -c -fPIC -o $@ $<
+	$(CC) -I. -c -fPIC -o $@ $<
 
 install:
 	cp libdyload.so /usr/lib/
+	cp dyload.h /usr/include/
+	cp dyload_library.h /usr/include/
+	cp dyload_watch_library.h /usr/include/
 
 # clean the project
 .PHONY: clean

@@ -14,7 +14,7 @@
 #include <pthread.h>
 #include <string.h>
 
-#include "library.h"
+#include <dyload_library.h>
 
 /* start and stop the watcher thread */
 void initialize_watcher();

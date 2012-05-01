@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <GL/glfw.h>
 
-#include "watch_library.h"
+#include <dyload.h>
 
 #include "draw.h"
 
